@@ -83,8 +83,8 @@ button {
 }
 
 .longline {
-  position: absolute;
-  height: 583vh;
+  position: fixed;
+  height: 100%;
   margin-left: 8.5vw;
   border-left: 2px solid var(--black);
 }
@@ -99,12 +99,63 @@ button {
 }
 
 @media only screen and (max-width: 1250px) {
-  .section-one {
+  /* .section-one {
     max-width: 50%;
   }
   .scrolldown {
     margin-left: -15vw;
+  } */
+
+  * {
+    visibility: hidden;
+    overflow: hidden;
+    opacity: 1 !important;
   }
+
+  .maintenance {
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    color: var(--black);
+    font-weight: 900;
+    font-size: 5vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    line-height: 7vh;
+  }
+
+  .maintenance2 {
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    color: var(--black);
+    font-weight: 300;
+    font-size: 3vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    margin-top: 6vw;
+  }
+}
+
+.maintenance {
+  opacity: 0;
+}
+.maintenance2 {
+  opacity: 0;
 }
 
 .section-one .section-text {
@@ -888,12 +939,13 @@ iframe {
   font-family: "brooklyn";
   font-size: calc(0.4vw + 0.4vh + 1vmin);
   line-height: 3vh;
-  margin-top: 18vh;
-  margin-left: 16.5vh;
-  padding-top: 2vh;
+  margin-top: 15vh;
+  margin-left: 8.5vw;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   padding-left: 30%;
   color: var(--hColor);
-  border-top: 1px var(--lblack) solid;
+  border-top: 2px var(--black) solid;
 }
 
 .projectimg {
