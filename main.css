@@ -948,7 +948,7 @@ iframe {
   color: var(--footer);
   border-top: 2px var(--black) solid;
   z-index: 0;
-  background-color: white;
+  background-color: var(--bg);
 }
 
 .projectimg {
