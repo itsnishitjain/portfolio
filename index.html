@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="main.css" />
     <title>Nishit Jain</title>
   </head>
-  <body>
+  <body class="light">
     <!-- BACKGROUND VIDEO -->
     <div class="crazycontainer">
       <div class="crazy"></div>
@@ -71,6 +71,13 @@
       </ul>
     </nav>
 
+    <div class="toggle">
+      <input type="checkbox" id="theme" class="toggle-input" checked />
+      <label for="theme" class="toggle-label">
+        <div class="toggle-icon"><i class="far fa-moon"></i></div>
+      </label>
+    </div>
+
     <!-- SOCIAL LINKS -->
 
     <ul
@@ -98,6 +105,13 @@
           href="https://www.linkedin.com/in/nishitjain1726/"
           style="text-decoration: none"
           ><i class="fab fa-linkedin"></i
+        ></a>
+      </li>
+      <li>
+        <a
+          href="https://open.spotify.com/user/31dv7s3vb6uv2dn4nl2ednj23fhu"
+          style="text-decoration: none"
+          ><i class="fab fa-spotify"></i
         ></a>
       </li>
     </ul>
@@ -593,29 +607,6 @@
     <script src="main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-      $(document).on("click", ".project-filter li", function () {
-        $(this)
-          .addClass("project-filter-active")
-          .siblings()
-          .removeClass("project-filter-active");
-      });
-
-      $(document).ready(function () {
-        $(".list").click(function () {
-          const value = $(this).attr("data-filter");
-          if (value == "all") {
-            $(".project-box").show("0");
-          } else {
-            $(".project-box")
-              .not("." + value)
-              .hide("0");
-            $(".project-box")
-              .filter("." + value)
-              .show("0");
-          }
-        });
-      });
-
       var lFollowX = 0,
         lFollowY = 0,
         x = 0,
@@ -646,7 +637,7 @@
       $(window).on("mousemove click", function (e) {
         var lMouseX = Math.max(
           -200,
-          Math.min(200, $(window).width() / 2 - e.clientX)
+          Math.min(0, $(window).width() / 2 - e.clientX)
         );
         var lMouseY = Math.max(
           -200,
