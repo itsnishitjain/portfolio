@@ -79,7 +79,7 @@
     >
       <input type="checkbox" id="theme" class="toggle-input" />
       <label for="theme" class="toggle-label">
-        <div class="toggle-icon"><i class="far fa-moon"></i></div>
+        <div class="toggle-icon"><i class="fas fa-moon"></i></div>
       </label>
     </div>
 
@@ -642,7 +642,7 @@
       $(window).on("mousemove click", function (e) {
         var lMouseX = Math.max(
           -200,
-          Math.min(0, $(window).width() / 2 - e.clientX)
+          Math.min(100, $(window).width() / 2 - e.clientX)
         );
         var lMouseY = Math.max(
           -200,
