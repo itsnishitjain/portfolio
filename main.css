@@ -7,6 +7,7 @@
   --icon: #424242;
   --btn-bg: #424242;
   --longline: #424242;
+  --input-border: var(--lblack);
   --title: #424242;
   --stroke: #424242;
   --hamburger: #424242;
@@ -32,6 +33,7 @@
   --btn-colour: white;
   --btn-bg: #424242;
   --longline: #424242;
+  --input-border: #424242;
   --title: #cccccc;
   --hamburger: #cccccc;
   --stroke: #cccccc;
@@ -665,7 +667,8 @@ button {
   border-radius: 5px;
   line-height: 22px;
   background-color: transparent;
-  border: 1px solid var(--lblack);
+  border: 2px solid var(--input-border);
+  color: var(--title);
   transition: all 0.3s;
   padding: 13px;
   margin-bottom: 2vh;
