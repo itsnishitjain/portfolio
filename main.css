@@ -7,7 +7,8 @@
   --icon: #424242;
   --btn-bg: #424242;
   --longline: #424242;
-  --input-border: var(--lblack);
+  --input-border: rgba(167, 167, 167, 0.8);
+  --crazydots: rgba(122, 122, 122, 0.2);
   --title: #424242;
   --stroke: #424242;
   --hamburger: #424242;
@@ -35,6 +36,7 @@
   --longline: #424242;
   --input-border: #424242;
   --title: #cccccc;
+  --crazydots: rgba(143, 143, 143, 0.2);
   --hamburger: #cccccc;
   --stroke: #cccccc;
   --footer: #fefdf8;
@@ -86,7 +88,7 @@ body {
 }
 
 .crazy {
-  background: radial-gradient(rgba(143, 143, 143, 0.2) 8%, transparent 8%);
+  background: radial-gradient(var(--crazydots) 8%, transparent 8%);
   background-position: 0% 0%;
   background-size: 5vmin 5vmin;
   width: 100%;
@@ -147,6 +149,10 @@ button {
 
   .crazy {
     visibility: visible !important;
+  }
+
+  .crazycontainer {
+    margin-left: 0;
   }
 
   .maintenance {
