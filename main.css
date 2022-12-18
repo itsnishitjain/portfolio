@@ -716,7 +716,7 @@ textarea {
   outline: none;
   border: none;
   margin-left: 3.5vw;
-  margin-top: 40vh;
+  margin-top: 43vh;
   z-index: 3;
   color: var(--toggle);
 }
@@ -744,7 +744,7 @@ textarea {
   outline: none;
   border: none;
   margin-left: 3.5vw;
-  margin-top: 75vh;
+  margin-top: 80vh;
   z-index: 3;
   color: var(--black);
 }
@@ -822,7 +822,7 @@ li {
   display: block;
   background-color: var(--hColor);
   transition: 1s;
-  padding-top: 10vh;
+  padding-top: 16vh;
   background-size: 5vmin 5vmin;
   background-image: linear-gradient(to right, var(--unit) 1px, transparent 1px),
     linear-gradient(to bottom, var(--unit) 1px, transparent 1px);
@@ -844,7 +844,7 @@ li {
   color: var(--accent);
 }
 .mobile-nav .title {
-  position: sticky;
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: left;
@@ -862,7 +862,7 @@ iframe {
   align-items: left;
   margin-left: 50%;
   margin-top: -60vh;
-  height: 50vh;
+  height: 49vh;
 }
 
 .mobile-nav.is-active {
@@ -875,7 +875,7 @@ iframe {
 }
 
 .mobile-nav a:hover {
-  color: var(--bg);
+  color: var(--white);
 }
 
 @media only screen and (max-width: 1200px) {
