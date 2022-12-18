@@ -99,6 +99,35 @@ function isTrue(value) {
 // Toggle theme any time the state of the checkbox changes
 toggle.addEventListener("change", toggleTheme);
 
+const btn = document.getElementById("button");
+const thename = document.getElementById("from_name");
+const email = document.getElementById("email_id");
+const themessage = document.getElementById("message");
+
+document.getElementById("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  btn.value = "Sending...";
+
+  const serviceID = "default_service";
+  const templateID = "template_53zvw5r";
+
+  emailjs.sendForm(serviceID, templateID, this).then(
+    () => {
+      btn.value = "Submit";
+      alert("Sent!");
+    },
+    (err) => {
+      btn.value = "Submit";
+      alert(JSON.stringify(err));
+    }
+  );
+
+  thename.value = "";
+  email.value = "";
+  themessage.value = "";
+});
+
 {
   AOS.init({
     duration: 3000,

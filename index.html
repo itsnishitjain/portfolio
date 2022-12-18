@@ -26,6 +26,14 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("pRa8thZ1ID18XtXOl");
+    </script>
     <link rel="stylesheet" href="main.css" />
     <title>Nishit Jain</title>
   </head>
@@ -653,28 +661,35 @@
           website, and I look forward to connecting with you soon!
         </p>
         <form
+          id="form"
           data-aos="fade-right"
           data-aos-duration="1000"
           data-aos-once="true"
         >
           <input
-            name="name"
+            id="from_name"
+            name="from_name"
             type="text"
             class="feedback-input"
             placeholder="Name"
+            required
           />
           <input
-            name="email"
-            type="text"
+            id="email_id"
+            name="email_id"
+            type="email"
             class="feedback-input"
             placeholder="Email"
+            required
           />
           <textarea
-            name="text"
+            id="message"
+            name="message"
             class="feedback-input"
             placeholder="Comment"
+            required
           ></textarea>
-          <input type="submit" value="Submit" class="submit" />
+          <input type="submit" id="button" value="Submit" class="submit" />
         </form>
       </div>
     </section>
